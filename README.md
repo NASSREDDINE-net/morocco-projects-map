@@ -1,23 +1,22 @@
-# 🇲🇦 Morocco Projects Map — V4.1 Clean
+# 🇲🇦 Morocco Projects Map — V4.2 Final Fix
 
-A clean rebuild of V4 using Leaflet + OpenStreetMap.
+Clean GitHub Pages build.
 
-## Fixed
-- Real Leaflet map
-- OpenStreetMap tiles
-- Stable map initialization after project data loads
-- One marker per project with coordinates
-- Clean marker styling (no broken icon assets)
-- Popup with project details and official source
-- Search/filter refreshes markers
-- Responsive map
-- Darija / English popup labels
-- Light/dark UI compatibility
-- No Vercel
-- No Gemini required
-- No custom CNAME
+### Fixed
+- Leaflet loads before the app.
+- Map initialization waits for `projects.json`.
+- Removed the old mock-map marker layer.
+- Removed the `window.projects` bug.
+- Removed malformed/extra map HTML.
+- Real OpenStreetMap tiles.
+- One Leaflet marker per project with coordinates.
+- Search/category/year filters update markers.
+- Fit Projects / Morocco controls.
+- Darija / English.
+- Light/Dark mode.
+- Local project bot works without Gemini.
+- Clear fallback message if the map or data cannot load.
 
-## Deploy
-Upload `index.html`, `assets/`, and `data/` to the root of a GitHub Pages repository.
-
-OpenStreetMap attribution is included and should remain visible.
+### Deploy
+Upload `index.html`, `assets/`, and `data/` directly to the repository root and use GitHub Pages:
+`main` → `/ (root)`.
