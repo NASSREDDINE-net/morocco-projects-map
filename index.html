@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#006233"><meta name="description" content="Morocco Projects Map — an open interactive directory of projects and initiatives across Morocco.">
+<title>Morocco Projects Map 🇲🇦</title><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span>🇲🇦</span><b>Morocco</b> Projects Map</a>
+<nav><a href="#map" data-i18n="navMap">Map</a><a href="#projects" data-i18n="navProjects">Projects</a><a href="#about" data-i18n="navAbout">About</a><button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button><button id="langBtn" class="lang-btn" type="button">EN</button></nav></header>
+<main>
+<section class="hero"><div><span class="eyebrow">VERIFIED PROJECT DIRECTORY · V2</span><h1 data-i18n-html="heroTitle">Discover projects<br><span>across Morocco.</span></h1>
+<p data-i18n="heroText">Explore a growing, structured map of projects, initiatives and innovation across Moroccan cities and regions.</p>
+<div class="hero-actions"><a class="btn primary" href="#map" data-i18n="exploreMap">Explore map</a><a class="btn ghost" href="#projects" data-i18n="browseProjects">Browse projects</a></div></div>
+<div class="hero-card"><div class="bot-avatar">✦</div><div><small>MAP BOT</small><strong data-i18n="botHero">Ask about a project, city or category.</strong><p data-i18n="botTry">Try: “technology projects in Tangier”</p></div></div></section>
+<section class="stats"><div><strong id="statProjects">0</strong><span data-i18n="projects">Projects</span></div><div><strong id="statRegions">0</strong><span data-i18n="regions">Regions</span></div><div><strong id="statCities">0</strong><span data-i18n="demoCities">Cities</span></div><div><strong>2022–2026</strong><span data-i18n="demoPeriod">Demo period</span></div></section>
+<section id="map" class="section"><div class="section-head"><div><span class="eyebrow" data-i18n="explore">EXPLORE</span><h2 data-i18n="projectMap">Project map</h2></div><div class="legend"><i></i> <span data-i18n="projectLocation">Project location</span></div></div>
+<div class="map-toolbar"><button id="fitMap" class="map-control" type="button">⛶ <span data-i18n="fit">Fit projects</span></button><button id="centerMap" class="map-control" type="button">⌖ <span data-i18n="morocco">Morocco</span></button><span id="mapCount" class="map-count"></span></div><div class="map-wrap"><div id="projectsMap" aria-label="Interactive map of Morocco projects"></div><div id="mapError" class="map-error" hidden></div></div><p class="notice" data-i18n="mapNotice">Real Leaflet + OpenStreetMap map. Project markers come from the verified local dataset.</p></section>
+<section id="projects" class="section"><div class="section-head"><div><span class="eyebrow" data-i18n="directory">DIRECTORY</span><h2 data-i18n="projects">Projects</h2></div><span id="resultCount" class="count"></span></div>
+<div class="filters"><input id="search" placeholder="🔎 Search project, city or region..." data-i18n-placeholder="searchPlaceholder"><select id="category"><option value="" data-i18n="allCategories">All categories</option></select><select id="year"><option value="" data-i18n="allYears">All years</option></select></div>
+<div id="projectGrid" class="grid"></div></section>
+<section class="bot section"><div><span class="eyebrow">MAP BOT</span><h2 data-i18n="findWhat">Find what you need.</h2><p data-i18n="botText">V1 Bot searches the local project dataset instantly — private, fast and GitHub Pages compatible.</p></div>
+<div class="bot-search"><input id="botInput" placeholder="Ask: projects in Rabat" data-i18n-placeholder="botPlaceholder"><button id="botBtn" class="btn primary" data-i18n="search">Search</button><div id="botAnswer"></div></div></section>
+<section id="about" class="section about"><span class="eyebrow">ABOUT</span><h2>Open, lightweight, extensible.</h2>
+<p>Morocco Projects Map is designed as an open project directory. V1 is static and uses JSON data, making it easy to host on GitHub Pages and expand later with verified datasets, richer maps and a real assistant.</p></section>
+</main><footer><span>© 2026 Morocco Projects Map</span><span data-i18n="footerV1">V4.2 · Open Project</span></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="assets/js/app.js"></script>
+</body></html>
