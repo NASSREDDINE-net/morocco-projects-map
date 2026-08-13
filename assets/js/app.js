@@ -65,7 +65,7 @@ function render(){
       <div class="card-footer"><span class="status">${escapeHtml(p.status||"—")} · ${escapeHtml(p.year||"—")}</span><button class="details-btn" data-id="${p.id}">${tr("details")} →</button></div>`;
     grid.appendChild(card);
   });
-  grid.querySelectorAll(".details-btn").forEach(b=>b.addEventListener("click",()=>openModal(Number(b.dataset.id))));
+
 }
 function updateStats(){
   $("#statProjects").textContent=state.projects.length;
@@ -102,16 +102,58 @@ function updateMap(){
 window.__openProject=id=>openModal(id);
 
 function openModal(id){
-  const p=state.projects.find(x=>Number(x.id)===Number(id));if(!p)return;
-  $("#modalContent").innerHTML=`<div class="modal-title"><span class="tag">${escapeHtml(p.category||"Project")}</span><h2>${escapeHtml(p.name)}</h2><div class="modal-meta">📍 ${escapeHtml(p.city||"—")} · ${escapeHtml(p.region||"—")}</div></div>
-    <p class="modal-description">${escapeHtml(p.description||"")}</p>
-    <div class="modal-data">
-      <div><small>${tr("status")}</small><b>${escapeHtml(p.status||"—")}</b></div><div><small>${tr("year")}</small><b>${escapeHtml(p.year||"—")}</b></div>
-      <div><small>${tr("budget")}</small><b>${escapeHtml(p.budget||"—")}</b></div><div><small>${tr("jobs")}</small><b>${escapeHtml(p.jobs||"—")}</b></div>
-    </div>
-    <div class="modal-actions">${p.source?`<a class="btn primary" href="${escapeHtml(p.source)}" target="_blank" rel="noopener noreferrer">${tr("source")} ↗</a>`:""}<button class="btn ghost" data-close-modal>${tr("reset")==="Reset"?"Close":"×"}</button></div>`;
-  $("#modal").hidden=false;$("#modal").setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
-  $("#modal").querySelectorAll("[data-close-modal]").forEach(x=>x.addEventListener("click",closeModal));
+  const p=state.projects.find(x=>String(x.id)===String(id));
+  const modal=$("#modal"), content=$("#modalContent");
+  if(!modal||!content)return;
+
+  if(!p){
+    content.innerHTML=`<div class="modal-fallback"><div class="modal-icon">!</div><h2>${escapeHtml(tr("noResults"))}</h2><p>${escapeHtml(tr("noMatch"))}</p></div>`;
+  }else{
+    const sourceUrl = typeof p.source==="string" && /^https?:\/\//i.test(p.source) ? p.source : "";
+    const safeSource = sourceUrl ? escapeHtml(sourceUrl) : "";
+    const title = escapeHtml(p.name || "Untitled project");
+    const category = escapeHtml(p.category || "Project");
+    const city = escapeHtml(p.city || "—");
+    const region = escapeHtml(p.region || "—");
+    const description = escapeHtml(p.description || "No description available.");
+    const status = escapeHtml(p.status || "—");
+    const year = escapeHtml(p.year || "—");
+    const budget = escapeHtml(p.budget ?? "—");
+    const jobs = escapeHtml(p.jobs ?? "—");
+    const sourceName = escapeHtml(p.sourceName || tr("source"));
+
+    content.innerHTML=`
+      <div class="modal-project">
+        <div class="modal-title">
+          <span class="tag">${category}</span>
+          ${p.verified ? `<span class="verified">✓ ${escapeHtml(tr("verified"))}</span>` : ""}
+          <h2 id="modalTitle">${title}</h2>
+          <div class="modal-meta">📍 ${city} · ${region}</div>
+        </div>
+        <p class="modal-description">${description}</p>
+        <div class="modal-data">
+          <div><small>${escapeHtml(tr("status"))}</small><b>${status}</b></div>
+          <div><small>${escapeHtml(tr("year"))}</small><b>${year}</b></div>
+          <div><small>${escapeHtml(tr("budget"))}</small><b>${budget}</b></div>
+          <div><small>${escapeHtml(tr("jobs"))}</small><b>${jobs}</b></div>
+        </div>
+        <div class="modal-source">
+          <small>${escapeHtml(tr("source"))}</small>
+          <strong>${sourceName}</strong>
+        </div>
+        <div class="modal-actions">
+          ${safeSource ? `<a class="btn primary" href="${safeSource}" target="_blank" rel="noopener noreferrer">${escapeHtml(tr("source"))} ↗</a>` : ""}
+          <button class="btn ghost" type="button" data-close-modal>${state.lang==="ar"?"إغلاق":state.lang==="fr"?"Fermer":"Close"}</button>
+        </div>
+      </div>`;
+  }
+
+  modal.hidden=false;
+  modal.setAttribute("aria-hidden","false"); modal.querySelector(".modal-card")?.setAttribute("aria-labelledby","modalTitle");
+  document.body.style.overflow="hidden";
+  modal.querySelectorAll("[data-close-modal]").forEach(x=>x.addEventListener("click",closeModal));
+  const close=modal.querySelector(".modal-close");
+  if(close)close.focus();
 }
 function closeModal(){$("#modal").hidden=true;$("#modal").setAttribute("aria-hidden","true");document.body.style.overflow="";}
 function runBot(){
@@ -139,6 +181,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(localStorage.getItem("mp-theme")==="dark")document.body.classList.add("dark");
   $("#themeBtn").addEventListener("click",()=>{document.body.classList.toggle("dark");localStorage.setItem("mp-theme",document.body.classList.contains("dark")?"dark":"light");});
   $("#langBtn").addEventListener("click",cycleLanguage);$("#heroSearchBtn").addEventListener("click",()=>{$("#search").focus();document.querySelector("#projects").scrollIntoView({behavior:"smooth"});});
+  $("#projectGrid").addEventListener("click",e=>{const b=e.target.closest(".details-btn");if(b)openModal(b.dataset.id);});
   ["search","category","region","year","status"].forEach(id=>{const el=$("#"+id);el.addEventListener(id==="search"?"input":"change",applyFilters);});
   $("#resetFilters").addEventListener("click",()=>{["search","category","region","year","status"].forEach(id=>{$("#"+id).value=""});applyFilters();});
   $("#emptyReset").addEventListener("click",()=>$("#resetFilters").click());

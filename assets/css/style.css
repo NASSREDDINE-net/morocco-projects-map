@@ -46,3 +46,18 @@ footer{display:flex;justify-content:space-between;padding:25px 5%;border-top:1px
 .rtl{font-family:"Segoe UI",Tahoma,Arial,sans-serif}.rtl .hero h1,.rtl .section h2{letter-spacing:0}.rtl .legend{margin-left:0;margin-right:auto}.rtl .modal-close{right:auto;left:14px}.rtl .modal-title{padding-right:0;padding-left:35px}
 @media(max-width:1050px){.filters{grid-template-columns:2fr 1fr 1fr}.reset-btn{grid-column:auto}.grid{grid-template-columns:repeat(2,1fr)}.insight-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.nav a{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.filters,.bot{grid-template-columns:1fr}.bot-input-row{flex-direction:column}.map-wrap{height:420px}.hero h1{letter-spacing:-2px}.section{padding-top:45px}.section-head{align-items:start;flex-direction:column}.legend{margin-left:0}.about-grid{grid-template-columns:1fr}.insight-grid{grid-template-columns:1fr}.hero-trust{gap:9px}.topbar{padding:12px 4%}}
+
+/* V5.1 modal reliability fix */
+.modal-card{min-height:220px}
+#modalContent{min-height:120px}
+.modal-project{display:block;color:var(--ink)}
+.modal-title{padding-right:42px}
+.modal-title h2{margin:10px 0 5px;font-size:32px;line-height:1.12;letter-spacing:-1px}
+.modal-title .verified{margin-left:8px}
+.modal-source{display:flex;flex-direction:column;gap:4px;padding:13px 14px;background:var(--bg);border:1px solid var(--line);border-radius:12px;margin:0 0 18px}
+.modal-source small{color:#7b8b82;font-size:11px}
+.modal-source strong{font-size:13px;overflow-wrap:anywhere}
+.modal-fallback{text-align:center;padding:25px 10px}
+.modal-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:#f2e8e8;color:var(--red);font-weight:900}
+.popup-link{margin-top:8px;border:0;background:transparent;color:#006233;font-weight:800;cursor:pointer}
+@media(max-width:600px){.modal-card{padding:21px}.modal-title h2{font-size:26px}.modal-data{grid-template-columns:1fr}.modal-title .verified{display:block;margin:7px 0 0}.modal-actions .btn{flex:1}}

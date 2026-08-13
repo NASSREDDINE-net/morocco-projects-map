@@ -1,6 +1,13 @@
-# 🇲🇦 Morocco Projects Map — V5.0
+# 🇲🇦 Morocco Projects Map — V5.1 Fix
 
 An open, static and interactive directory of projects and initiatives across Morocco.
+
+## 🔧 V5.1 Fix
+
+- Fixed the project-details modal rendering issue that could leave a blank dialog.
+- Added defensive handling for missing/invalid project IDs and incomplete project fields.
+- Added event delegation for dynamically generated **View details** buttons.
+- Improved mobile modal layout and accessibility.
 
 ## ✨ What's new in V5.0
 
