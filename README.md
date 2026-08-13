@@ -1,8 +1,8 @@
-# 🇲🇦 Morocco Projects Map — V5.1 Fix
+# 🇲🇦 Morocco Projects Map — V5.1.1 Fix
 
 An open, static and interactive directory of projects and initiatives across Morocco.
 
-## 🔧 V5.1 Fix
+## 🔧 V5.1.1 Fix
 
 - Fixed the project-details modal rendering issue that could leave a blank dialog.
 - Added defensive handling for missing/invalid project IDs and incomplete project fields.
@@ -102,3 +102,10 @@ https://morocco-projects.is-a.bot/
 ## License
 
 Open project for educational, civic-tech and data-visualisation use. Check the repository history and source references before redistributing project data.
+
+
+## V5.1.1 Fix
+
+- Fixed stale-browser/CDN caching of the previous JavaScript bundle by versioning `app.js` as `5.1.1`.
+- The modal is rendered before it is revealed and explicitly hidden on close.
+- Added validation that `data/projects.json` contains an array.
