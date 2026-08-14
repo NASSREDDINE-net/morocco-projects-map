@@ -61,3 +61,39 @@ html[data-theme="dark"] .eyebrow{color:#55d58f}
 @media(max-width:520px){
   .theme-toggle{width:38px;height:38px;border-radius:10px}
 }
+
+/* Project refinement — map, dashboard, accessibility and responsive UX */
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero-pills span{padding:7px 11px;border:1px solid #d8e4dc;border-radius:999px;background:rgba(255,255,255,.72);font-size:12px;font-weight:800}
+.insights{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:0 8% 30px}
+.insight-panel{background:#fff;border:1px solid #e0e7e2;border-radius:18px;padding:22px;min-height:160px}
+.insight-panel.highlight{display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#08783f,#075d34);color:#fff;border-color:transparent}
+.insight-panel.highlight .eyebrow{color:#d9ffe8}
+.insight-panel.highlight>b{font-size:56px;line-height:1;margin:8px 0}
+.insight-panel.highlight>span:last-child{opacity:.82}
+.section-head.compact{margin-bottom:12px}.section-head.compact h2{font-size:24px}
+.breakdown{display:grid;gap:10px}
+.break-row>div{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:4px}
+.break-row i{display:block;height:7px;background:#e9f1ec;border-radius:99px;overflow:hidden}
+.break-row em{display:block;height:100%;background:#08783f;border-radius:99px}
+.map-actions{display:flex;gap:8px;flex-wrap:wrap}
+.map-legend{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.map-legend>span{padding:6px 9px;border:1px solid #dce5df;border-radius:999px;background:#fff;font-size:12px;font-weight:800}
+.map-legend .legend-title{background:#eaf5ed;color:#08783f}
+.project-marker{background:transparent!important;border:0!important}
+.project-marker span{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid #08783f;box-shadow:0 5px 14px rgba(0,0,0,.22);font-size:19px}
+.popup-link{margin-top:6px;border:0;background:#08783f;color:#fff;border-radius:8px;padding:6px 9px;font-weight:800;cursor:pointer}
+.modal-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.verified{padding:5px 9px;border-radius:20px;background:#eaf5ed;color:#08783f;font-size:11px;font-weight:900}
+.modal-description{font-size:16px;line-height:1.65;color:#5f6e66}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+.share-feedback{min-height:20px;margin-top:8px;color:#08783f;font-weight:800;font-size:13px}
+@media(max-width:800px){.insights{grid-template-columns:1fr;padding:0 6% 25px}.map-actions{width:100%}.map-actions .btn{flex:1}}
+html[data-theme="dark"] .hero-pills{background:transparent}
+html[data-theme="dark"] .hero-pills span{background:#17251e;border-color:#31463a}
+html[data-theme="dark"] .insight-panel{background:#14201a;border-color:#2b3c33}
+html[data-theme="dark"] .map-legend>span{background:#17251e;border-color:#31463a;color:#edf5f0}
+html[data-theme="dark"] .map-legend .legend-title{background:#173425;color:#55d58f}
+html[data-theme="dark"] .project-marker span{background:#14201a;border-color:#55d58f}
+html[data-theme="dark"] .modal-description{color:#aabbb2}
+html[data-theme="dark"] .verified{background:#173425;color:#55d58f}

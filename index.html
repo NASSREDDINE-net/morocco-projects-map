@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="Morocco Projects Map">
 <meta name="twitter:description" content="Interactive map and dashboard of projects across Morocco.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="assets/css/style.css?v=6.0.4">
+<link rel="stylesheet" href="assets/css/style.css?v=6.1.0">
 </head>
 <body>
 <header class="topbar">
@@ -35,7 +35,8 @@
     <span class="eyebrow">MOROCCO · PROJECT DIRECTORY</span>
     <h1 id="heroTitle">Explore projects across Morocco</h1>
     <p id="heroText">Interactive map, searchable directory and project intelligence dashboard.</p>
-    <div class="actions"><a class="btn primary" href="#map">Explore map</a><a class="btn ghost" href="#projects">Browse projects</a></div>
+    <div class="actions"><a class="btn primary" href="#map" id="heroMap">Explore map</a><a class="btn ghost" href="#projects" id="heroBrowse">Browse projects</a></div>
+    <div class="hero-pills"><span>🇲🇦 Morocco</span><span>🗺️ Interactive</span><span>🌐 FR · EN · AR</span></div>
   </div>
 </section>
 
@@ -45,9 +46,21 @@
   <article><b id="statCategories">0</b><span id="lblCategories">Sectors</span></article>
   <article><b id="statActive">0</b><span id="lblActive">Active</span></article>
 </section>
+<section class="insights" aria-label="Project insights">
+  <div class="insight-panel">
+    <div class="section-head compact"><div><span class="eyebrow" id="insightEyebrow">INSIGHTS</span><h2 id="insightTitle">Project overview</h2></div></div>
+    <div id="categoryBreakdown" class="breakdown"></div>
+  </div>
+  <div class="insight-panel highlight">
+    <span class="eyebrow" id="latestEyebrow">LATEST</span>
+    <b id="latestYear">—</b>
+    <span id="latestText">Latest project year in the dataset</span>
+  </div>
+</section>
 
 <section id="map" class="map-section">
-  <div class="section-head"><div><span class="eyebrow">MAP</span><h2>Interactive Morocco Map</h2></div><button id="resetMap" class="btn ghost">Reset view</button></div>
+  <div class="section-head"><div><span class="eyebrow" id="mapEyebrow">MAP</span><h2>Interactive Morocco Map</h2></div><div class="map-actions"><button id="locateMe" class="btn ghost">📍 Locate me</button><button id="resetMap" class="btn ghost">Reset view</button></div></div>
+  <div id="mapLegend" class="map-legend" aria-label="Map legend"></div>
   <div id="mapCanvas"></div>
 </section>
 
@@ -58,13 +71,14 @@
     <select id="category"><option value="">All sectors</option></select>
     <select id="region"><option value="">All regions</option></select>
     <select id="status"><option value="">All statuses</option></select>
+    <select id="year"><option value="">All years</option></select>
   </div>
   <div id="resultCount" class="result-count"></div>
   <div id="projectGrid" class="grid"></div>
 </section>
 </main>
 
-<footer><span>© 2026 Morocco Projects Map</span><span>Developed by <a href="https://nassreddine.is-a.dev" target="_blank" rel="noopener noreferrer">NASSREDDINE</a></span></footer>
+<footer><span id="footerCopyright">© 2026 Morocco Projects Map</span><span><span id="developedBy">Developed by</span> <a href="https://nassreddine.is-a.dev" target="_blank" rel="noopener noreferrer">NASSREDDINE</a></span></footer>
 
 <div id="projectModal" class="modal" hidden aria-hidden="true">
   <div class="modal-backdrop" data-close></div>
@@ -75,6 +89,6 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="assets/js/app.js?v=6.0.4"></script>
+<script src="assets/js/app.js?v=6.1.0"></script>
 </body>
 </html>
