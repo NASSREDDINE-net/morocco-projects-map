@@ -140,7 +140,7 @@ function initTheme(){
 
 async function boot(){
  initTheme();
- const r=await fetch("data/projects.json?v=6.0.3"); state.projects=await r.json(); state.filtered=[...state.projects];
+ const r=await fetch("data/projects.json?v=6.0.4"); state.projects=await r.json(); state.filtered=[...state.projects];
  fillSelect("#category","category");fillSelect("#region","region");fillSelect("#status","status");
  renderStats();applyLang();initMap();renderCards();
  ["search","category","region","status"].forEach(id=>$( "#"+id).addEventListener("input",apply));
