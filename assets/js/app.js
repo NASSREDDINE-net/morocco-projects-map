@@ -117,8 +117,30 @@ function applyLang(){
    if(el && el.options.length) el.options[0].textContent=label;
  });
 }
+
+function initTheme(){
+ const saved=localStorage.getItem("morocco-projects-theme");
+ const dark=saved==="dark";
+ document.documentElement.dataset.theme=dark?"dark":"light";
+ const b=$("#themeToggle");
+ if(b){
+   b.textContent=dark?"☀️":"🌙";
+   b.title=dark?"Light mode":"Dark mode";
+   b.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");
+   b.onclick=()=>{
+     const isDark=document.documentElement.dataset.theme==="dark";
+     document.documentElement.dataset.theme=isDark?"light":"dark";
+     localStorage.setItem("morocco-projects-theme",isDark?"light":"dark");
+     b.textContent=isDark?"🌙":"☀️";
+     b.title=isDark?"Dark mode":"Light mode";
+     b.setAttribute("aria-label",isDark?"Switch to dark mode":"Switch to light mode");
+   };
+ }
+}
+
 async function boot(){
- const r=await fetch("data/projects.json?v=6.0.2"); state.projects=await r.json(); state.filtered=[...state.projects];
+ initTheme();
+ const r=await fetch("data/projects.json?v=6.0.3"); state.projects=await r.json(); state.filtered=[...state.projects];
  fillSelect("#category","category");fillSelect("#region","region");fillSelect("#status","status");
  renderStats();applyLang();initMap();renderCards();
  ["search","category","region","status"].forEach(id=>$( "#"+id).addEventListener("input",apply));

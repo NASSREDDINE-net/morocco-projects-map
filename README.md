@@ -137,3 +137,11 @@ Open project for educational, civic-tech and data-visualisation use. Check the r
 - Added favicon and Apple touch icon.
 - Added an Open Graph brand image for social sharing.
 - Logo remains linked to the homepage.
+
+
+## V6.0.3 — Dark Mode
+
+- Added a dark/light mode toggle in the header.
+- The selected theme is saved in `localStorage`.
+- Dark mode covers the navigation, dashboard, cards, filters, map section, modal and footer.
+- Theme changes do not affect the Moroccan Darija language setting.
