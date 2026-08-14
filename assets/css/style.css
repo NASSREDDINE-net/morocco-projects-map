@@ -7,3 +7,24 @@ html[dir="rtl"] .hero h1,html[dir="rtl"] .hero p,html[dir="rtl"] .section-head,
 html[dir="rtl"] .card,html[dir="rtl"] .modal-card{text-align:right}
 html[dir="rtl"] .modal-close{right:auto;left:18px}
 html[dir="rtl"] .topbar nav{direction:rtl}
+
+/* V6.0.2 — Morocco Projects Map logo */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:inherit;
+}
+.brand img{
+  width:44px;
+  height:44px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 4px 14px rgba(0,0,0,.10);
+  flex:none;
+}
+.brand:hover img{transform:translateY(-1px)}
+@media(max-width:520px){
+  .brand img{width:38px;height:38px;border-radius:10px}
+}

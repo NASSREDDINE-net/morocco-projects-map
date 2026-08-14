@@ -1,4 +1,28 @@
+# 🇲🇦 Morocco Projects Map — V5.1.1 Fix
 
+An open, static and interactive directory of projects and initiatives across Morocco.
+
+## 🔧 V5.1.1 Fix
+
+- Fixed the project-details modal rendering issue that could leave a blank dialog.
+- Added defensive handling for missing/invalid project IDs and incomplete project fields.
+- Added event delegation for dynamically generated **View details** buttons.
+- Improved mobile modal layout and accessibility.
+
+## ✨ What's new in V5.0
+
+- Interactive **Leaflet + OpenStreetMap** map
+- Live project markers linked to the JSON dataset
+- Search across project name, city, region, category, description and source
+- Filters for **category, region, year and status**
+- Project details modal with source link, status, year, budget and jobs
+- Dataset insights: top category, latest year, verified projects and active pipeline
+- Local “Map Bot” search
+- **English / Français / العربية** interface
+- Light / dark mode
+- Responsive mobile layout
+- GitHub Pages compatible — no backend required
+- Existing `CNAME` preserved for `morocco-projects.is-a.bot`
 
 ## 📁 Structure
 
@@ -105,3 +129,11 @@ Open project for educational, civic-tech and data-visualisation use. Check the r
 - Translated the full visible interface: navigation, hero, dashboard, map, filters, buttons, project details, source/status labels and empty states.
 - Added RTL layout support for the Darija interface.
 - Added cache-busting for the new translation bundle.
+
+
+## V6.0.2 — Official Logo
+
+- Added the Morocco Projects Map logo to the header.
+- Added favicon and Apple touch icon.
+- Added an Open Graph brand image for social sharing.
+- Logo remains linked to the homepage.
