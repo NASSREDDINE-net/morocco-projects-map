@@ -121,3 +121,11 @@ Open project for educational, civic-tech and data-visualisation use. Check the r
 ## V5.1.3
 
 - Footer now displays **Developed by NASSREDDINE** with a link to `https://nassreddine.is-a.dev`.
+
+
+## V6.0.1 — Moroccan Darija
+
+- The **AR** button now uses Moroccan Darija (الدارجة المغربية), not Modern Standard Arabic.
+- Translated the full visible interface: navigation, hero, dashboard, map, filters, buttons, project details, source/status labels and empty states.
+- Added RTL layout support for the Darija interface.
+- Added cache-busting for the new translation bundle.
