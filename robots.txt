@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://morocco-projects.is-a.bot/sitemap.xml

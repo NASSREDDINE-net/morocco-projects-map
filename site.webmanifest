@@ -1,0 +1,8 @@
+{
+  "name": "Morocco Projects Map",
+  "short_name": "Morocco Projects",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Interactive map and dashboard of projects across Morocco.",
+  "lang": "fr"
+}

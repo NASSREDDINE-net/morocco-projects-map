@@ -14,7 +14,8 @@
     "lng": -7.2,
     "sourceName": "Maroc.ma — La nouvelle LGV Kénitra-Marrakech",
     "source": "https://maroc.ma/fr/actualites/la-nouvelle-lgv-kenitra-marrakech-un-projet-fort-impact-socio-economique",
-    "verified": true
+    "verified": true,
+    "_slug": "lgv-k-nitra-marrakech"
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "lng": -7.59,
     "sourceName": "Maroc.ma — ONCF infrastructure works",
     "source": "https://maroc.ma/fr/actualites/projet-de-la-lgv-kenitra-marrakech-loncf-entame-de-grands-travaux-dinfrastructure-casablanca",
-    "verified": true
+    "verified": true,
+    "_slug": "travaux-lgv-casablanca-mohammedia-nouaceur"
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
     "lng": -7.65,
     "sourceName": "Maroc.ma — Le dessalement au service de la souveraineté hydrique",
     "source": "https://maroc.ma/fr/actualites/le-dessalement-au-service-de-la-souverainete-hydrique",
-    "verified": true
+    "verified": true,
+    "_slug": "station-de-dessalement-du-grand-casablanca"
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "lng": -7.55,
     "sourceName": "Maroc.ma — Barrage Aït Ziyat",
     "source": "https://maroc.ma/fr/actualites/barrage-ait-ziyat-infrastructure-strategique-pour-renforcer-la-securite-hydrique-et-soutenir-le",
-    "verified": true
+    "verified": true,
+    "_slug": "barrage-a-t-ziyat"
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
     "lng": -9.45,
     "sourceName": "Maroc.ma — Grand Agadir: le barrage Tamri",
     "source": "https://maroc.ma/fr/actualites/grand-agadir-le-barrage-tamri-un-projet-structurant-pour-garantir-la-securite-hydrique",
-    "verified": true
+    "verified": true,
+    "_slug": "barrage-tamri"
   },
   {
     "id": 6,
@@ -99,7 +104,8 @@
     "lng": -5.83,
     "sourceName": "Maroc.ma — Projet d’hôpital universitaire de psychiatrie",
     "source": "https://maroc.ma/fr/actualites/renforcement-de-loffre-de-soins-tanger-lancement-dun-projet-de-construction-dun-hopital-universitaire",
-    "verified": true
+    "verified": true,
+    "_slug": "h-pital-universitaire-de-psychiatrie-de-tanger"
   },
   {
     "id": 7,
@@ -116,7 +122,8 @@
     "lng": -6.58,
     "sourceName": "Maroc.ma — Nouvelle gare routière de Kénitra",
     "source": "https://maroc.ma/fr/actualites/kenitra-les-infrastructures-se-renforcent-avec-le-lancement-des-travaux-de-construction-dune-nouvelle",
-    "verified": true
+    "verified": true,
+    "_slug": "nouvelle-gare-routi-re-de-k-nitra"
   },
   {
     "id": 8,
@@ -133,7 +140,8 @@
     "lng": -5.7,
     "sourceName": "Maroc.ma — Technologie créative",
     "source": "https://maroc.ma/fr/actualites/tanger-tetouan-al-hoceima-environ-4-mdh-dedies-au-developpement-de-la-technologie-creative",
-    "verified": true
+    "verified": true,
+    "_slug": "technologie-cr-ative-tanger-t-touan-al-hoceima"
   },
   {
     "id": 9,
@@ -150,7 +158,8 @@
     "lng": -5.55,
     "sourceName": "Maroc.ma — Ardouna Tahtajouna",
     "source": "https://maroc.ma/fr/actualites/fes-meknes-lancement-du-projet-ardouna-tahtajouna-pour-lemploi-rural-et-la-transition-agroecologique",
-    "verified": true
+    "verified": true,
+    "_slug": "ardouna-tahtajouna"
   },
   {
     "id": 10,
@@ -167,7 +176,8 @@
     "lng": -5.0,
     "sourceName": "Maroc.ma — Protection de Fès contre les inondations",
     "source": "https://maroc.ma/fr/actualites/plus-de-14-mdh-pour-la-protection-de-fes-contre-les-inondations-de-loued-ain-smen",
-    "verified": true
+    "verified": true,
+    "_slug": "protection-de-f-s-contre-les-inondations-de-l-oued-ain-smen"
   },
   {
     "id": 11,
@@ -184,7 +194,8 @@
     "lng": -4.84,
     "sourceName": "Maroc.ma — Appel à projets touristiques Fès-Meknès",
     "source": "https://mail.maroc.ma/fr/actualites/fes-meknes-appel-projets-pour-la-realisation-de-11-projets-touristiques",
-    "verified": true
+    "verified": true,
+    "_slug": "11-projets-touristiques-f-s-mekn-s"
   },
   {
     "id": 12,
@@ -201,6 +212,7 @@
     "lng": -6.84,
     "sourceName": "Maroc.ma — Observatoire des projets",
     "source": "https://maroc.ma/fr/actualites/lancement-de-la-plateforme-digitale-observatoire-des-projets-du-ministere-de-lequipement-et-de-leau",
-    "verified": true
+    "verified": true,
+    "_slug": "observatoire-des-projets-minist-re-de-l-quipement-et-de-l-eau"
   }
 ]
