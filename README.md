@@ -116,3 +116,8 @@ Open project for educational, civic-tech and data-visualisation use. Check the r
 - Fixed the blank popup appearing automatically on first load or browser refresh.
 - The project modal now remains hidden until a user explicitly opens project details.
 - Added a cache-busted JavaScript version (`5.1.2`).
+
+
+## V5.1.3
+
+- Footer now displays **Developed by NASSREDDINE** with a link to `https://nassreddine.is-a.dev`.
